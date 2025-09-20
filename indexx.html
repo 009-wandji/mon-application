@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Berechnung Pyrolyse und Fraktionierte Destillation</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Berechnung Pyrolyse & Fraktionierte Destillation</h1>
+
+    <div class="input-section">
+      <label for="quantitePlastique">Menge an Kunststoffabfällen zur Pyrolyse (kg):</label>
+      <input type="number" id="quantitePlastique" placeholder="Menge eingeben" min="0" step="any" />
+    </div>
+
+    <section class="results">
+      <h2>Ergebnisse der Pyrolyse</h2>
+      <ul>
+        <li>Pyrolyseöl: <span id="huilePyrolyse">0</span> kg</li>
+        <li>Gas: <span id="gaz">0</span> kg</li>
+        <li>Feste Rückstände: <span id="residus">0</span> kg</li>
+        <li>Schweröl (Pyrolyse): <span id="huileLourde">0</span> kg</li>
+      </ul>
+    </section>
+
+    <section class="results">
+      <h2>Ergebnisse der fraktionierten Destillation (in Litern)</h2>
+      <ul>
+        <li>Diesel: <span id="diesel">0</span> L</li>
+        <li>Benzin: <span id="essence">0</span> L</li>
+
+<li>Kerosin: <span id="kerosene">0</span> L</li>
+        <li>Schweröl (Destillation): <span id="huileLourdeDist">0</span> L</li>
+      </ul>
+    </section>
+
+    <section class="results">
+      <h2>Verkaufspreise (in Euro)</h2>
+      <ul>
+        <li>Preis Diesel: <span id="prixDiesel">0 €</span></li>
+        <li>Preis Benzin: <span id="prixEssence">0 €</span></li>
+        <li>Preis Kerosin: <span id="prixKerosene">0 €</span></li>
+        <li>Preis Schweröl: <span id="prixHuileLourdeDist">0 €</span></li>
+      </ul>
+    </section>
+
+    <section class="results">
+      <h2>Ausgaben (in Euro)</h2>
+      <ul>
+        <li>Arbeitskosten: <span id="depMainOeuvre">0 €</span></li>
+        <li>Kauf von Kunststoffabfällen: <span id="depAchatDechets">0 €</span></li>
+        <li>Transport: <span id="depTransport">0 €</span></li>
+        <li><strong>Gesamtausgaben: <span id="depTotal">0 €</span></strong></li>
+      </ul>
+    </section>
+
+    <section class="results total">
+      <h2>Gesamtergebnisse</h2>
+      <p>Gesamtumsatz: <strong><span id="totalVentes">0 €</span></strong></p>
+      <p>Reingewinn: <strong><span id="beneficeNet">0 €</span></strong></p>
+    </section>
+
+    <!-- PDF-SCHALTFLÄCHE -->
+   
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
